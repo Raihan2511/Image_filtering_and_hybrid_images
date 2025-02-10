@@ -268,8 +268,179 @@ The hybrid image contains \textbf{smooth variations} from \texttt{image1} and \t
 We used \pythoninline{cv2.getGaussianKernel(ksize, sigma)} to generate a 1D Gaussian kernel (column vector). We muliplied it with its transpose (filter @ filter.T) to convert it into a 2D Gaussian kernel. This method leverages separability, making Gaussian blurring more efficient than computing a full 2D kernel directly.
 
 \chapter{Results}
-\subsection{Cat-Dog Hybrid Image}
+\section{Cat-Dog Hybrid Image}
+\vspace{1.25em}
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{0.45\textwidth}
+			\centering
+			\includegraphics[height=12em]{./images/dog.jpg}
+		\end{minipage}
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\includegraphics[height=12em]{./images/cat.jpg}
+		\end{minipage}
+		\caption{Original Dog and Cat Image}
+		\label{dog_cat}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{0.45\textwidth}
+			\centering
+			\includegraphics[height=12em]{./images/dog_low.png}
+		\end{minipage}
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\includegraphics[height=12em]{./images/cat_high.png}
+		\end{minipage}
+		\caption{Low Frequency Dog and High Frequency Cat Image generated with cutoff-frequency=7}
+		\label{dog_cat_low_high}
+\end{figure}
+\begin{figure}[H]
+	\centering
+		\includegraphics[height=15em]{./images/dog_cat_hybrid.png}
+		\caption{Dog cat Hybrid Image}
+		\label{dog_cat_low_hybrid}
+\end{figure}
+\section{Bicycle-Motorcycle Hybrid Image}
+\vspace{1.25em}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[height=12em]{./images/bicycle.jpg}
+        \end{minipage}
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[height=12em]{./images/motorcycle.jpg}
+        \end{minipage}
+        \caption{Original Bicycle and Motorcycle Image}
+        \label{bicycle_motorcycle}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[height=12em]{./images/motorcycle_low.png}
+        \end{minipage}
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[height=12em]{./images/bicycle_high.png}
+        \end{minipage}
+        \caption{Low Frequency Bicycle and High Frequency Motorcycle Image generated with cutoff-frequency=5}
+        \label{bicycle_motorcycle_low_high}
+\end{figure}
+\begin{figure}[H]
+    \centering
+        \includegraphics[height=15em]{./images/motorcycle_bicycle_hybrid.png}
+        \caption{Bicycle Motorcycle Hybrid Image}
+        \label{bicycle_motorcycle_hybrid}
+\end{figure}
 
+\section{Plane-Bird Hybrid Image}
+\vspace{1.25em}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[height=12em]{./images/plane.jpg}
+        \end{minipage}
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[height=12em]{./images/bird.jpg}
+        \end{minipage}
+        \caption{Original Plane and Bird Image}
+        \label{plane_bird}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[height=12em]{./images/plane_low.png}
+        \end{minipage}
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[height=12em]{./images/bird_high.png}
+        \end{minipage}
+        \caption{Low Frequency Plane and High Frequency Bird Image generated with cutoff-frequency=7}
+        \label{plane_bird_low_high}
+\end{figure}
+\begin{figure}[H]
+    \centering
+        \includegraphics[height=15em]{./images/plane_bird_hybrid.png}
+        \caption{Plane Bird Hybrid Image}
+        \label{plane_bird_hybrid}
+\end{figure}
+
+\section{Einstein-Marilyn Hybrid Image}
+\vspace{1.25em}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[height=12em]{./images/einstein.jpg}
+        \end{minipage}
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[height=12em]{./images/marilyn.jpg}
+        \end{minipage}
+        \caption{Original Einstein and Marilyn Image}
+        \label{einstein_marilyn}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[height=12em]{./images/einstein_low.png}
+        \end{minipage}
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[height=12em]{./images/marilyn_high.png}
+        \end{minipage}
+        \caption{Low Frequency Einstein and High Frequency Marilyn Image generated with cutoff-frequency=3}
+        \label{einstein_marilyn_low_high}
+\end{figure}
+\begin{figure}[H]
+    \centering
+        \includegraphics[height=15em]{./images/einstein_marilyn_hybrid.png}
+        \caption{Einstein Marilyn Hybrid Image}
+        \label{einstein_marilyn_hybrid}
+\end{figure}
+
+\section{Submarine-Fish Hybrid Image}
+\vspace{1.25em}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[height=12em]{./images/submarine.jpg}
+        \end{minipage}
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[height=12em]{./images/fish.jpg}
+        \end{minipage}
+        \caption{Original Submarine and Fish Image}
+        \label{submarine_fish}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[height=12em]{./images/submarine_low.png}
+        \end{minipage}
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[height=12em]{./images/fish_high.png}
+        \end{minipage}
+        \caption{Low Frequency Submarine and High Frequency Fish Image generated with cutoff-frequency=4}
+        \label{submarine_fish_low_high}
+\end{figure}
+\begin{figure}[H]
+    \centering
+        \includegraphics[height=15em]{./images/submarine_fish_hybrid.png}
+        \caption{Submarine Fish Hybrid Image}
+        \label{submarine_fish_hybrid}
+\end{figure}
 
 \chapter{Task Split}
 \textbf{Raihan Uddin} was in charge of most of the implementation (coding) part. \\
